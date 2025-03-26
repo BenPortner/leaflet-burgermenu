@@ -21,6 +21,17 @@ Hovering over menu items reveals submenus, and clicking items can trigger custom
 
 ---
 
+## 🔍 Why another Leaflet control plugin?
+
+Leaflet already has a couple of plugins to add menus to its maps. Here are the existing alternatives and what prevented me from using them for my application:
+- [L.cascadeButtons](https://github.com/clavijojuan/L.cascadeButtons): provides nested buttons but it is not clear from the documentation how to replace the icons with text to turn this into an actual menu
+- [L.EasyButton](https://github.com/CliffCloud/Leaflet.EasyButton): simple to use but not designed for nested buttons / sub-menus
+- [Leaflet.BootstrapDropdowns](https://github.com/mfhsieh/leaflet-bootstrap-dropdowns/): no easy way to create sub-menus; not dependency-free
+- [Leaflet.Control.Custom](https://github.com/yigityuce/Leaflet.Control.Custom): highly customizable but no easy way to integrate sub-menus
+- [Leaflet.Control.Select](https://github.com/adammertel/Leaflet.Control.Select): provides easy sub-menus but only an `onChange` method is provided, i.e. clicking the already-selected menu item has no effect
+
+---
+
 ## 🧪 Usage
 
 1. Include `leaflet` stylesheet in your HTML:
@@ -34,10 +45,10 @@ Hovering over menu items reveals submenus, and clicking items can trigger custom
    ```html
    <link
      rel="stylesheet"
-     href="https://unpkg.com/leaflet-burgermenu@latest/dist/leaflet.css"
+     href="https://unpkg.com/leaflet-burgermenu@latest/dist/leaflet-burgermenu.css"
    />
    ```
-3. Include `leaflet` Javascript:
+3. Include `leaflet` Javascript as a script tag:
    ```html
    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
    ```

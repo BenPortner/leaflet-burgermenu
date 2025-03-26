@@ -23,6 +23,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenPortner/leaflet-burgermenu"
+    "url": "git+https://github.com/BenPortner/leaflet-burgermenu.git"
   }
 }
