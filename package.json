@@ -1,0 +1,24 @@
+{
+  "name": "leaflet-burgermenu",
+  "version": "0.1.0",
+  "description": "A Leaflet plugin that adds a burger menu with submenus",
+  "main": "dist/leaflet-burgermenu.umd.js",
+  "module": "dist/leaflet-burgermenu.esm.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "leaflet",
+    "menu"
+  ],
+  "author": "Benjamin W. Portner",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.37.0"
+  }
+}
