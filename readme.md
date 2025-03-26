@@ -3,6 +3,8 @@
 A lightweight [Leaflet](https://leafletjs.com/) plugin that adds a burger menu with nested submenus to the map interface.
 Hovering over menu items reveals submenus, and clicking items can trigger custom actions.
 
+**[Example here.](https://benportner.github.io/leaflet-burgermenu/)**
+
 ---
 
 ## 📦 Features
