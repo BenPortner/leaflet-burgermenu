@@ -100,5 +100,3 @@ Supports infinite nesting (though typically 2–3 levels deep is ideal).
 ## 📜 License
 
 MIT © Benjamin W. Portner
-
----
