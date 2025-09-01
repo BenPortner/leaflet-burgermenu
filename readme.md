@@ -1,5 +1,9 @@
 # 🍔 Leaflet Burgermenu Plugin
 
+| :warning: WARNING           |
+|:----------------------------|
+| You are reading the documentation for v1.0.0 of this plugin, which is compatible with Leaflet v2 (ESM version). If you want to use this plugin with Leaflet v1 (UMD version), please click [here](https://github.com/BenPortner/leaflet-burgermenu/tree/leaflet-v1). |
+
 A lightweight [Leaflet](https://leafletjs.com/) plugin that adds a burger menu with nested submenus to the map interface.
 Hovering over menu items reveals submenus, and clicking items can trigger custom actions.
 
@@ -50,38 +54,48 @@ Leaflet already has a couple of plugins to add menus to its maps. Here are the e
      href="https://unpkg.com/leaflet-burgermenu@latest/dist/leaflet-burgermenu.css"
    />
    ```
-3. Include `leaflet` Javascript as a script tag:
+3. Import `leaflet` and `leaflet-burgermenu`:
    ```html
-   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+   <script type="importmap">
+     {
+        "imports": {
+            "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
+            "leaflet-burgermenu": "https://unpkg.com/leaflet-burgermenu@latest/dist/leaflet-burgermenu.esm.min.js"
+        }
+     }
+   </script>
    ```
-4. Include `leaflet-burgermenu.js`:
+4. Add a map with a Burger Menu Control:
    ```html
-   <script src="https://unpkg.com/leaflet-burgermenu@latest/dist/leaflet-burgermenu.umd.min.js"></script>
-   ```
-5. Add the Burger Menu Control:
-   ```js
-   L.control.burgerMenu({
-     title: "main",
-     menuItems: [
-       {
-         title: "level 0 item 1",
-         onClick: () => {
-           alert("You clicked level 0 item 1.");
-         },
-       },
-       {
-         title: "level 0 submenu",
-         menuItems: [
-           {
-             title: "level 1 item 1",
-             onClick: () => {
-               alert("You clicked level 1 item 1.");
-             },
-           },
-         ],
-       },
-     ],
-   }).addTo(map);
+    <script type="module">
+      import { Map, TileLayer, Control } from 'leaflet';
+      import { BurgerMenuControl } from 'leaflet-burgermenu';
+
+      const map = new Map('map').setView([52.5200, 13.4050], 12);
+
+      new BurgerMenuControl({
+        title: "main",
+        menuItems: [
+          {
+            title: "level 0 item 1",
+            onClick: () => {
+              alert("You clicked level 0 item 1.");
+            },
+          },
+          {
+            title: "level 0 submenu",
+            menuItems: [
+              {
+                title: "level 1 item 1",
+                onClick: () => {
+                  alert("You clicked level 1 item 1.");
+                },
+              },
+            ],
+          },
+        ],
+      }).addTo(map);
+    </script>
    ```
 
 ---

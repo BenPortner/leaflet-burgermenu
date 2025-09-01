@@ -1,11 +1,12 @@
+import { Control, DomUtil, DomEvent } from 'leaflet';
+
 // leaflet-burgermenu.js
 // A Leaflet plugin that adds a burger menu with submenus
 // Author: Benjamin W. Portner
 // License: MIT
-import { Control, DomUtil, DomEvent } from "leaflet";
 
 
-export class BurgerMenuControl extends Control {
+class BurgerMenuControl extends Control {
 
     constructor(options) {
         const defaultOptions = {
@@ -58,4 +59,7 @@ export class BurgerMenuControl extends Control {
 
         return container;
     }
-};
+}
+
+export { BurgerMenuControl };
+//# sourceMappingURL=leaflet-burgermenu.esm.js.map
