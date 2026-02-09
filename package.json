@@ -7,6 +7,7 @@
   "description": "A Leaflet plugin that adds a burger menu with submenus",
   "browser": true,
   "types": "src/leaflet-burgermenu.d.ts",
+  "main": "src/leaflet-burgermenu.js",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
