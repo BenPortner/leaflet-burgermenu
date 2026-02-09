@@ -3,9 +3,10 @@
   "author": "Benjamin W. Portner",
   "license": "MIT",
   "homepage": "https://github.com/BenPortner/leaflet-burgermenu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Leaflet plugin that adds a burger menu with submenus",
   "browser": true,
+  "types": "src/leaflet-burgermenu.d.ts",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
