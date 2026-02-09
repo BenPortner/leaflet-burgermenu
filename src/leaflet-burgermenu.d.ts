@@ -12,7 +12,7 @@ declare module 'leaflet-burgermenu' {
 
     export interface MenuItemWithSubItems {
         title: string;
-        subItems: MenuItem[];
+        menuItems: MenuItem[];
     }
 
     export type MenuItem = MenuItemWithClick | MenuItemWithSubItems;
